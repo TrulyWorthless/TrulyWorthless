@@ -62,12 +62,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ERC20\",\"name\":\"_token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Received\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"onTokenTransfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol\":\"BridgeContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol\":{\"keccak256\":\"0x74c886597e8ed5daac7ae693abe61e0b59df67d9ec2a9be54f479ec67a2b66b0\",\"urls\":[\"bzz-raw://bd6f26b95a25d14f3e0911e95116e9bc766f5cf0aecb0ce5feaa69cdf58fe873\",\"dweb:/ipfs/QmNdjAm1rrykLZfQoGTHTppcfMrENqEbYFsEPd1GRErRZP\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516102ec3803806102ec8339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610258806100946000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063c734f91714610030575b600080fd5b61007c6004803603604081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610096565b604051808215151515815260200191505060405180910390f35b6000816000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561013757600080fd5b505afa15801561014b573d6000803e3d6000fd5b505050506040513d602081101561016157600080fd5b8101908080519060200190929190505050101561017d57600080fd5b7ff8cfa3a81accae1f9ad8bbf41772c1d07142aff674babe19de1171e043cee00c833084604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a19291505056fea26469706673582212200d0e79eb89f0658800fbda280f6142ecb096a68e4548360af7490c11fc7d15c864736f6c63430006020033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063c734f91714610030575b600080fd5b61007c6004803603604081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610096565b604051808215151515815260200191505060405180910390f35b6000816000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561013757600080fd5b505afa15801561014b573d6000803e3d6000fd5b505050506040513d602081101561016157600080fd5b8101908080519060200190929190505050101561017d57600080fd5b7ff8cfa3a81accae1f9ad8bbf41772c1d07142aff674babe19de1171e043cee00c833084604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a19291505056fea26469706673582212200d0e79eb89f0658800fbda280f6142ecb096a68e4548360af7490c11fc7d15c864736f6c63430006020033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ERC20\",\"name\":\"_token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Received\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"onTokenTransfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol\":\"BridgeContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol\":{\"keccak256\":\"0x23b897d0deb8aa4c5ef0f58a23ff08ac94e2160e21360192053fe59e6d7dddd8\",\"urls\":[\"bzz-raw://a91493866858f47f0361af8dfbcf6ae0a5f7cd72e1622cdc55a0bd3ffa634d05\",\"dweb:/ipfs/QmQ38F5UML6LSTDk77yFq8fxFcZtbVyhzVFVzzQNQTgx1i\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516102eb3803806102eb8339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610257806100946000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063c734f91714610030575b600080fd5b61007c6004803603604081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610096565b604051808215151515815260200191505060405180910390f35b6000816000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561013757600080fd5b505afa15801561014b573d6000803e3d6000fd5b505050506040513d602081101561016157600080fd5b81019080805190602001909291905050501461017c57600080fd5b7ff8cfa3a81accae1f9ad8bbf41772c1d07142aff674babe19de1171e043cee00c833084604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a19291505056fea2646970667358221220c4ca23da6f382133e8a14147b5c910f82c89b71b494fbe4079f00bb10661044864736f6c63430006020033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063c734f91714610030575b600080fd5b61007c6004803603604081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610096565b604051808215151515815260200191505060405180910390f35b6000816000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561013757600080fd5b505afa15801561014b573d6000803e3d6000fd5b505050506040513d602081101561016157600080fd5b81019080805190602001909291905050501461017c57600080fd5b7ff8cfa3a81accae1f9ad8bbf41772c1d07142aff674babe19de1171e043cee00c833084604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a19291505056fea2646970667358221220c4ca23da6f382133e8a14147b5c910f82c89b71b494fbe4079f00bb10661044864736f6c63430006020033",
   "sourceMap": "82:379:0:-:0;;;209:58;8:9:-1;5:2;;;30:1;27;20:12;5:2;209:58:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;209:58:0;;;;;;;;;;;;;;;;256:6;248:5;;:14;;;;;;;;;;;;;;;;;;209:58;82:379;;;;;;",
-  "deployedSourceMap": "82:379:0:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;82:379:0;;;;;;;;;;;;;;;;;;;271:188;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;271:188:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;339:4;393:6;359:5;;;;;;;;;;;:15;;;383:4;359:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;359:30:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;359:30:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;359:30:0;;;;;;;;;;;;;;;;:40;;351:49;;;;;;411:43;426:4;440;447:6;411:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;271:188;;;;:::o",
-  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ncontract BridgeContract {\n  event ERC677Received(address sender, address receiver, uint256 amount);\n  ERC20 internal token;\n\n  constructor(ERC20 _token) public {\n    token = _token;\n  }\n\n  function onTokenTransfer(address from, uint amount) public returns (bool) {\n    require(token.balanceOf(address(this)) >= amount);\n    emit ERC677Received(from, address(this), amount);\n  }\n}\n",
+  "deployedSourceMap": "82:379:0:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;82:379:0;;;;;;;;;;;;;;;;;;;271:188;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;271:188:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;339:4;393:6;359:5;;;;;;;;;;;:15;;;383:4;359:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;359:30:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;359:30:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;359:30:0;;;;;;;;;;;;;;;;:40;351:49;;;;;;411:43;426:4;440;447:6;411:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;271:188;;;;:::o",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ncontract BridgeContract {\n  event ERC677Received(address sender, address receiver, uint256 amount);\n  ERC20 internal token;\n\n  constructor(ERC20 _token) public {\n    token = _token;\n  }\n\n  function onTokenTransfer(address from, uint amount) public returns (bool) {\n    require(token.balanceOf(address(this)) == amount);\n    emit ERC677Received(from, address(this), amount);\n  }\n}\n",
   "sourcePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol",
   "ast": {
     "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol",
@@ -96,7 +96,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 55,
-        "sourceUnit": 917,
+        "sourceUnit": 922,
         "src": "25:55:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -227,7 +227,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC20_$916",
+              "typeIdentifier": "t_contract$_ERC20_$921",
               "typeString": "contract ERC20"
             },
             "typeName": {
@@ -235,10 +235,10 @@
               "id": 11,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 916,
+              "referencedDeclaration": 921,
               "src": "184:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$916",
+                "typeIdentifier": "t_contract$_ERC20_$921",
                 "typeString": "contract ERC20"
               }
             },
@@ -268,7 +268,7 @@
                       "referencedDeclaration": 12,
                       "src": "248:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC20_$916",
+                        "typeIdentifier": "t_contract$_ERC20_$921",
                         "typeString": "contract ERC20"
                       }
                     },
@@ -283,13 +283,13 @@
                       "referencedDeclaration": 14,
                       "src": "256:6:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC20_$916",
+                        "typeIdentifier": "t_contract$_ERC20_$921",
                         "typeString": "contract ERC20"
                       }
                     },
                     "src": "248:14:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$916",
+                      "typeIdentifier": "t_contract$_ERC20_$921",
                       "typeString": "contract ERC20"
                     }
                   },
@@ -322,7 +322,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC20_$916",
+                    "typeIdentifier": "t_contract$_ERC20_$921",
                     "typeString": "contract ERC20"
                   },
                   "typeName": {
@@ -330,10 +330,10 @@
                     "id": 13,
                     "name": "ERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 916,
+                    "referencedDeclaration": 921,
                     "src": "221:5:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$916",
+                      "typeIdentifier": "t_contract$_ERC20_$921",
                       "typeString": "contract ERC20"
                     }
                   },
@@ -457,7 +457,7 @@
                               "referencedDeclaration": 12,
                               "src": "359:5:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC20_$916",
+                                "typeIdentifier": "t_contract$_ERC20_$921",
                                 "typeString": "contract ERC20"
                               }
                             },
@@ -468,7 +468,7 @@
                             "lValueRequested": false,
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 528,
+                            "referencedDeclaration": 533,
                             "src": "359:15:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -491,7 +491,7 @@
                           }
                         },
                         "nodeType": "BinaryOperation",
-                        "operator": ">=",
+                        "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
                           "id": 39,
@@ -836,7 +836,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 55,
-        "sourceUnit": 917,
+        "sourceUnit": 922,
         "src": "25:55:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -967,7 +967,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC20_$916",
+              "typeIdentifier": "t_contract$_ERC20_$921",
               "typeString": "contract ERC20"
             },
             "typeName": {
@@ -975,10 +975,10 @@
               "id": 11,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 916,
+              "referencedDeclaration": 921,
               "src": "184:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$916",
+                "typeIdentifier": "t_contract$_ERC20_$921",
                 "typeString": "contract ERC20"
               }
             },
@@ -1008,7 +1008,7 @@
                       "referencedDeclaration": 12,
                       "src": "248:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC20_$916",
+                        "typeIdentifier": "t_contract$_ERC20_$921",
                         "typeString": "contract ERC20"
                       }
                     },
@@ -1023,13 +1023,13 @@
                       "referencedDeclaration": 14,
                       "src": "256:6:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC20_$916",
+                        "typeIdentifier": "t_contract$_ERC20_$921",
                         "typeString": "contract ERC20"
                       }
                     },
                     "src": "248:14:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$916",
+                      "typeIdentifier": "t_contract$_ERC20_$921",
                       "typeString": "contract ERC20"
                     }
                   },
@@ -1062,7 +1062,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC20_$916",
+                    "typeIdentifier": "t_contract$_ERC20_$921",
                     "typeString": "contract ERC20"
                   },
                   "typeName": {
@@ -1070,10 +1070,10 @@
                     "id": 13,
                     "name": "ERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 916,
+                    "referencedDeclaration": 921,
                     "src": "221:5:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$916",
+                      "typeIdentifier": "t_contract$_ERC20_$921",
                       "typeString": "contract ERC20"
                     }
                   },
@@ -1197,7 +1197,7 @@
                               "referencedDeclaration": 12,
                               "src": "359:5:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC20_$916",
+                                "typeIdentifier": "t_contract$_ERC20_$921",
                                 "typeString": "contract ERC20"
                               }
                             },
@@ -1208,7 +1208,7 @@
                             "lValueRequested": false,
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 528,
+                            "referencedDeclaration": 533,
                             "src": "359:15:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -1231,7 +1231,7 @@
                           }
                         },
                         "nodeType": "BinaryOperation",
-                        "operator": ">=",
+                        "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
                           "id": 39,
@@ -1555,7 +1555,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-10-27T16:41:24.324Z",
+  "updatedAt": "2020-10-27T17:41:56.426Z",
   "devdoc": {
     "methods": {}
   },

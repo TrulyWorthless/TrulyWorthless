@@ -37,11 +37,6 @@
           "internalType": "uint256",
           "name": "amount",
           "type": "uint256"
-        },
-        {
-          "internalType": "bytes",
-          "name": "data",
-          "type": "bytes"
         }
       ],
       "name": "transferAndCall",
@@ -56,25 +51,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"contract BridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"transferAndCall\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":\"IERC677\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol\":{\"keccak256\":\"0x74c886597e8ed5daac7ae693abe61e0b59df67d9ec2a9be54f479ec67a2b66b0\",\"urls\":[\"bzz-raw://bd6f26b95a25d14f3e0911e95116e9bc766f5cf0aecb0ce5feaa69cdf58fe873\",\"dweb:/ipfs/QmNdjAm1rrykLZfQoGTHTppcfMrENqEbYFsEPd1GRErRZP\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":{\"keccak256\":\"0x5e132a9e36bba58853c79d8dfcb69c84db1c0c630c54ccb725b9a2aa596c6da1\",\"urls\":[\"bzz-raw://11d19d759c35330f1480977ecbd6cd232a8297afd47392f7d02a8843453d1087\",\"dweb:/ipfs/QmQvCWUxs41SPuLz7NfdfvuLZ41dYGejnuCn46UHnSMJQq\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"contract BridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferAndCall\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":\"IERC677\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol\":{\"keccak256\":\"0x23b897d0deb8aa4c5ef0f58a23ff08ac94e2160e21360192053fe59e6d7dddd8\",\"urls\":[\"bzz-raw://a91493866858f47f0361af8dfbcf6ae0a5f7cd72e1622cdc55a0bd3ffa634d05\",\"dweb:/ipfs/QmQ38F5UML6LSTDk77yFq8fxFcZtbVyhzVFVzzQNQTgx1i\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":{\"keccak256\":\"0x81493c2a313ceaf689296c3af0c6212ac8120ea4f45d22c3a8f0fef8238a6738\",\"urls\":[\"bzz-raw://a086ff407f1e98262f8a3452ea1cf74f8bb003ccc737a551b74622173c7099f2\",\"dweb:/ipfs/QmUdaTmobcxzM8LegyWVVnpyBSFqQ4MQv2nv91MdWLKce3\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.6.0;\n\nimport \"./BridgeContract.sol\";\n\ninterface IERC677 {\n  event ERC677Transfer(address sender, address receiver, uint256 amount);\n\n  function transferAndCall(BridgeContract receiver, uint256 amount, bytes calldata data) external returns (bool);\n}\n",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"./BridgeContract.sol\";\n\ninterface IERC677 {\n  event ERC677Transfer(address sender, address receiver, uint256 amount);\n\n  function transferAndCall(BridgeContract receiver, uint256 amount) external returns (bool);\n}\n",
   "sourcePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol",
   "ast": {
     "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol",
     "exportedSymbols": {
       "IERC677": [
-        140
+        145
       ]
     },
-    "id": 141,
+    "id": 146,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 119,
+        "id": 126,
         "literals": [
           "solidity",
           "^",
@@ -87,9 +82,9 @@
       {
         "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol",
         "file": "./BridgeContract.sol",
-        "id": 120,
+        "id": 127,
         "nodeType": "ImportDirective",
-        "scope": 141,
+        "scope": 146,
         "sourceUnit": 55,
         "src": "25:30:2",
         "symbolAliases": [],
@@ -102,9 +97,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 140,
+        "id": 145,
         "linearizedBaseContracts": [
-          140
+          145
         ],
         "name": "IERC677",
         "nodeType": "ContractDefinition",
@@ -112,21 +107,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 128,
+            "id": 135,
             "name": "ERC677Transfer",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 127,
+              "id": 134,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 122,
+                  "id": 129,
                   "indexed": false,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 128,
+                  "scope": 135,
                   "src": "100:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -135,7 +130,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 121,
+                    "id": 128,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "100:7:2",
@@ -150,12 +145,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 124,
+                  "id": 131,
                   "indexed": false,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 128,
+                  "scope": 135,
                   "src": "116:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -164,7 +159,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 123,
+                    "id": 130,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "116:7:2",
@@ -179,12 +174,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 126,
+                  "id": 133,
                   "indexed": false,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 128,
+                  "scope": 135,
                   "src": "134:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -193,7 +188,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 125,
+                    "id": 132,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "134:7:2",
@@ -213,8 +208,8 @@
           {
             "body": null,
             "documentation": null,
-            "functionSelector": "4000aea0",
-            "id": 139,
+            "functionSelector": "1296ee62",
+            "id": 144,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -222,16 +217,16 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 135,
+              "id": 140,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 130,
+                  "id": 137,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 139,
+                  "scope": 144,
                   "src": "179:23:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -241,7 +236,7 @@
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 129,
+                    "id": 136,
                     "name": "BridgeContract",
                     "nodeType": "UserDefinedTypeName",
                     "referencedDeclaration": 54,
@@ -256,11 +251,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 132,
+                  "id": 139,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 139,
+                  "scope": 144,
                   "src": "204:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -269,7 +264,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 131,
+                    "id": 138,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "204:7:2",
@@ -280,49 +275,22 @@
                   },
                   "value": null,
                   "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 134,
-                  "name": "data",
-                  "nodeType": "VariableDeclaration",
-                  "overrides": null,
-                  "scope": 139,
-                  "src": "220:19:2",
-                  "stateVariable": false,
-                  "storageLocation": "calldata",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes_calldata_ptr",
-                    "typeString": "bytes"
-                  },
-                  "typeName": {
-                    "id": 133,
-                    "name": "bytes",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "220:5:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes_storage_ptr",
-                      "typeString": "bytes"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
                 }
               ],
-              "src": "178:62:2"
+              "src": "178:41:2"
             },
             "returnParameters": {
-              "id": 138,
+              "id": 143,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 137,
+                  "id": 142,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 139,
-                  "src": "259:4:2",
+                  "scope": 144,
+                  "src": "238:4:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -330,10 +298,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 136,
+                    "id": 141,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "259:4:2",
+                    "src": "238:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -343,33 +311,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "258:6:2"
+              "src": "237:6:2"
             },
-            "scope": 140,
-            "src": "154:111:2",
+            "scope": 145,
+            "src": "154:90:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 141,
-        "src": "57:210:2"
+        "scope": 146,
+        "src": "57:189:2"
       }
     ],
-    "src": "0:268:2"
+    "src": "0:247:2"
   },
   "legacyAST": {
     "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol",
     "exportedSymbols": {
       "IERC677": [
-        140
+        145
       ]
     },
-    "id": 141,
+    "id": 146,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 119,
+        "id": 126,
         "literals": [
           "solidity",
           "^",
@@ -382,9 +350,9 @@
       {
         "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol",
         "file": "./BridgeContract.sol",
-        "id": 120,
+        "id": 127,
         "nodeType": "ImportDirective",
-        "scope": 141,
+        "scope": 146,
         "sourceUnit": 55,
         "src": "25:30:2",
         "symbolAliases": [],
@@ -397,9 +365,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 140,
+        "id": 145,
         "linearizedBaseContracts": [
-          140
+          145
         ],
         "name": "IERC677",
         "nodeType": "ContractDefinition",
@@ -407,21 +375,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 128,
+            "id": 135,
             "name": "ERC677Transfer",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 127,
+              "id": 134,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 122,
+                  "id": 129,
                   "indexed": false,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 128,
+                  "scope": 135,
                   "src": "100:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -430,7 +398,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 121,
+                    "id": 128,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "100:7:2",
@@ -445,12 +413,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 124,
+                  "id": 131,
                   "indexed": false,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 128,
+                  "scope": 135,
                   "src": "116:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -459,7 +427,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 123,
+                    "id": 130,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "116:7:2",
@@ -474,12 +442,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 126,
+                  "id": 133,
                   "indexed": false,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 128,
+                  "scope": 135,
                   "src": "134:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -488,7 +456,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 125,
+                    "id": 132,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "134:7:2",
@@ -508,8 +476,8 @@
           {
             "body": null,
             "documentation": null,
-            "functionSelector": "4000aea0",
-            "id": 139,
+            "functionSelector": "1296ee62",
+            "id": 144,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -517,16 +485,16 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 135,
+              "id": 140,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 130,
+                  "id": 137,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 139,
+                  "scope": 144,
                   "src": "179:23:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -536,7 +504,7 @@
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 129,
+                    "id": 136,
                     "name": "BridgeContract",
                     "nodeType": "UserDefinedTypeName",
                     "referencedDeclaration": 54,
@@ -551,11 +519,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 132,
+                  "id": 139,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 139,
+                  "scope": 144,
                   "src": "204:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -564,7 +532,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 131,
+                    "id": 138,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "204:7:2",
@@ -575,49 +543,22 @@
                   },
                   "value": null,
                   "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 134,
-                  "name": "data",
-                  "nodeType": "VariableDeclaration",
-                  "overrides": null,
-                  "scope": 139,
-                  "src": "220:19:2",
-                  "stateVariable": false,
-                  "storageLocation": "calldata",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes_calldata_ptr",
-                    "typeString": "bytes"
-                  },
-                  "typeName": {
-                    "id": 133,
-                    "name": "bytes",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "220:5:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes_storage_ptr",
-                      "typeString": "bytes"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
                 }
               ],
-              "src": "178:62:2"
+              "src": "178:41:2"
             },
             "returnParameters": {
-              "id": 138,
+              "id": 143,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 137,
+                  "id": 142,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 139,
-                  "src": "259:4:2",
+                  "scope": 144,
+                  "src": "238:4:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -625,10 +566,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 136,
+                    "id": 141,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "259:4:2",
+                    "src": "238:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -638,20 +579,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "258:6:2"
+              "src": "237:6:2"
             },
-            "scope": 140,
-            "src": "154:111:2",
+            "scope": 145,
+            "src": "154:90:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 141,
-        "src": "57:210:2"
+        "scope": 146,
+        "src": "57:189:2"
       }
     ],
-    "src": "0:268:2"
+    "src": "0:247:2"
   },
   "compiler": {
     "name": "solc",
@@ -659,7 +600,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-10-27T16:41:24.329Z",
+  "updatedAt": "2020-10-27T17:41:56.431Z",
   "devdoc": {
     "methods": {}
   },

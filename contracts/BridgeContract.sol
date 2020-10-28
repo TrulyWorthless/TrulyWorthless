@@ -11,7 +11,7 @@ contract BridgeContract {
   }
 
   function onTokenTransfer(address from, uint amount) public returns (bool) {
-    require(token.balanceOf(address(this)) >= amount);
+    require(token.balanceOf(address(this)) == amount);
     emit ERC677Received(from, address(this), amount);
   }
 }
