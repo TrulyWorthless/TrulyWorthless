@@ -1,8 +1,7 @@
 # TrulyWorthless
 A repository for the TrulyWorthless Coin
 
-![logo]
-(images/TrulyWorthlessLogo.png)
+![logo](https://raw.githubusercontent.com/amshirif/TrulyWorthless/main/images/TrulyWorthlessLogo.png)
 
 Here are the Mainnet and Kovan Loocations of the Coin
 
