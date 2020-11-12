@@ -31,13 +31,7 @@
       "inputs": [
         {
           "indexed": false,
-          "internalType": "address",
-          "name": "sender",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "address",
+          "internalType": "contract RivendellNetworkBridgeContract",
           "name": "receiver",
           "type": "address"
         },
@@ -299,7 +293,7 @@
     {
       "inputs": [
         {
-          "internalType": "contract BridgeContract",
+          "internalType": "contract RivendellNetworkBridgeContract",
           "name": "receiver",
           "type": "address"
         },
@@ -321,25 +315,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"subtractedValue\",\"type\":\"uint256\"}],\"name\":\"decreaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"addedValue\",\"type\":\"uint256\"}],\"name\":\"increaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract BridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferAndCall\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"allowance(address,address)\":{\"details\":\"See {IERC20-allowance}.\"},\"approve(address,uint256)\":{\"details\":\"See {IERC20-approve}.     * Requirements:     * - `spender` cannot be the zero address.\"},\"balanceOf(address)\":{\"details\":\"See {IERC20-balanceOf}.\"},\"decimals()\":{\"details\":\"Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5,05` (`505 / 10 ** 2`).     * Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is called.     * NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}.\"},\"decreaseAllowance(address,uint256)\":{\"details\":\"Atomically decreases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`.\"},\"increaseAllowance(address,uint256)\":{\"details\":\"Atomically increases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address.\"},\"name()\":{\"details\":\"Returns the name of the token.\"},\"symbol()\":{\"details\":\"Returns the symbol of the token, usually a shorter version of the name.\"},\"totalSupply()\":{\"details\":\"See {IERC20-totalSupply}.\"},\"transfer(address,uint256)\":{\"details\":\"See {IERC20-transfer}.     * Requirements:     * - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"See {IERC20-transferFrom}.     * Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20};     * Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":\"ERC677\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol\":{\"keccak256\":\"0x23b897d0deb8aa4c5ef0f58a23ff08ac94e2160e21360192053fe59e6d7dddd8\",\"urls\":[\"bzz-raw://a91493866858f47f0361af8dfbcf6ae0a5f7cd72e1622cdc55a0bd3ffa634d05\",\"dweb:/ipfs/QmQ38F5UML6LSTDk77yFq8fxFcZtbVyhzVFVzzQNQTgx1i\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":{\"keccak256\":\"0xe5f2b67391ea261e7fa816b583b2756e20405e8f2f55e9cf1619e9a99b42b58c\",\"urls\":[\"bzz-raw://fefe172834a30e902f2c54bb8224b9aabc7c903e5d0a9d7b3189d70e2f690f4d\",\"dweb:/ipfs/QmRzZXpz1C281WQBxty8yn3Q4fFVfHjXCjtgHzWBaGtqRe\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":{\"keccak256\":\"0x81493c2a313ceaf689296c3af0c6212ac8120ea4f45d22c3a8f0fef8238a6738\",\"urls\":[\"bzz-raw://a086ff407f1e98262f8a3452ea1cf74f8bb003ccc737a551b74622173c7099f2\",\"dweb:/ipfs/QmUdaTmobcxzM8LegyWVVnpyBSFqQ4MQv2nv91MdWLKce3\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"contract RivendellNetworkBridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"subtractedValue\",\"type\":\"uint256\"}],\"name\":\"decreaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"addedValue\",\"type\":\"uint256\"}],\"name\":\"increaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract RivendellNetworkBridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferAndCall\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"allowance(address,address)\":{\"details\":\"See {IERC20-allowance}.\"},\"approve(address,uint256)\":{\"details\":\"See {IERC20-approve}.     * Requirements:     * - `spender` cannot be the zero address.\"},\"balanceOf(address)\":{\"details\":\"See {IERC20-balanceOf}.\"},\"decimals()\":{\"details\":\"Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5,05` (`505 / 10 ** 2`).     * Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is called.     * NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}.\"},\"decreaseAllowance(address,uint256)\":{\"details\":\"Atomically decreases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`.\"},\"increaseAllowance(address,uint256)\":{\"details\":\"Atomically increases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address.\"},\"name()\":{\"details\":\"Returns the name of the token.\"},\"symbol()\":{\"details\":\"Returns the symbol of the token, usually a shorter version of the name.\"},\"totalSupply()\":{\"details\":\"See {IERC20-totalSupply}.\"},\"transfer(address,uint256)\":{\"details\":\"See {IERC20-transfer}.     * Requirements:     * - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"See {IERC20-transferFrom}.     * Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20};     * Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":\"ERC677\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":{\"keccak256\":\"0xd15560d7890f314ae0ca7f86b554d9478b4ced270d27c7e1798f25ae43e94b0a\",\"urls\":[\"bzz-raw://643d019d38cfd1c5e2922222ac15371e38092ee93ee8ed96710db3702ab7e613\",\"dweb:/ipfs/QmXBT94N3jjvyx4vuVhEEhesY5E2RNsA1gAuYRexuwHNDf\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":{\"keccak256\":\"0xba603cced3380122fc47c3c78c9dfbb77441eb81b82dae375e24448bdf647757\",\"urls\":[\"bzz-raw://988a99de9e3e1a66d4cfcc139e4d89358478e72c5825b0744d98e286b7098119\",\"dweb:/ipfs/QmUbpbz4TLkThddBMxp93adEMBZj1AQVtKCcv69h33o18y\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/RivendellNetworkBridgeContract.sol\":{\"keccak256\":\"0xa243e99a01f1577f0a5bbc95e5086efaefea6a734bf6e317d6354ad22db26b1e\",\"urls\":[\"bzz-raw://74d6ff4e220d8511ee60f9f75159db413d4b13f54f8e4a377e5f3c00878aa130\",\"dweb:/ipfs/QmdMvGDerQY1a7peUr5PRUywJ5oZX9uFu3nnUsHbr5UTzn\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\nimport \"./IERC677.sol\";\nimport \"./BridgeContract.sol\";\n\nabstract contract ERC677 is ERC20, IERC677 {\n  function transferAndCall(BridgeContract receiver, uint amount) public override returns (bool) {\n    require(transfer(address(receiver), amount));\n\n    ERC677Transfer(msg.sender, address(receiver), amount);\n\n    require(receiver.onTokenTransfer(msg.sender, amount));\n  }\n}\n",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\nimport \"./IERC677.sol\";\nimport \"./RivendellNetworkBridgeContract.sol\";\n\nabstract contract ERC677 is ERC20, IERC677 {\n  function transferAndCall(RivendellNetworkBridgeContract receiver, uint amount) public override returns (bool) {\n    require(transfer(address(receiver), amount));\n\n    emit ERC677Transfer(receiver, amount);\n\n    require(receiver.receiveTokens(msg.sender, amount));\n  }\n}\n",
   "sourcePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol",
   "ast": {
     "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol",
     "exportedSymbols": {
       "ERC677": [
-        104
+        44
       ]
     },
-    "id": 105,
+    "id": 45,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 56,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -347,38 +341,38 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:23:0"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "id": 57,
+        "id": 2,
         "nodeType": "ImportDirective",
-        "scope": 105,
-        "sourceUnit": 916,
-        "src": "25:55:1",
+        "scope": 45,
+        "sourceUnit": 1205,
+        "src": "25:55:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
         "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol",
         "file": "./IERC677.sol",
-        "id": 58,
+        "id": 3,
         "nodeType": "ImportDirective",
-        "scope": 105,
-        "sourceUnit": 126,
-        "src": "81:23:1",
+        "scope": 45,
+        "sourceUnit": 64,
+        "src": "81:23:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol",
-        "file": "./BridgeContract.sol",
-        "id": 59,
+        "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/RivendellNetworkBridgeContract.sol",
+        "file": "./RivendellNetworkBridgeContract.sol",
+        "id": 4,
         "nodeType": "ImportDirective",
-        "scope": 105,
-        "sourceUnit": 55,
-        "src": "105:30:1",
+        "scope": 45,
+        "sourceUnit": 345,
+        "src": "105:46:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -389,67 +383,67 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 60,
+              "id": 5,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 915,
-              "src": "165:5:1",
+              "referencedDeclaration": 1204,
+              "src": "181:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$915",
+                "typeIdentifier": "t_contract$_ERC20_$1204",
                 "typeString": "contract ERC20"
               }
             },
-            "id": 61,
+            "id": 6,
             "nodeType": "InheritanceSpecifier",
-            "src": "165:5:1"
+            "src": "181:5:0"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 62,
+              "id": 7,
               "name": "IERC677",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 125,
-              "src": "172:7:1",
+              "referencedDeclaration": 63,
+              "src": "188:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IERC677_$125",
+                "typeIdentifier": "t_contract$_IERC677_$63",
                 "typeString": "contract IERC677"
               }
             },
-            "id": 63,
+            "id": 8,
             "nodeType": "InheritanceSpecifier",
-            "src": "172:7:1"
+            "src": "188:7:0"
           }
         ],
         "contractDependencies": [
-          125,
-          240,
-          915,
-          984
+          63,
+          426,
+          1204,
+          1273
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 104,
+        "id": 44,
         "linearizedBaseContracts": [
-          104,
-          125,
-          915,
-          984,
-          240
+          44,
+          63,
+          1204,
+          1273,
+          426
         ],
         "name": "ERC677",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "baseFunctions": [
-              124
+              62
             ],
             "body": {
-              "id": 102,
+              "id": 42,
               "nodeType": "Block",
-              "src": "278:175:1",
+              "src": "310:157:0",
               "statements": [
                 {
                   "expression": {
@@ -463,48 +457,48 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 77,
+                                "id": 22,
                                 "name": "receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 65,
-                                "src": "309:8:1",
+                                "referencedDeclaration": 10,
+                                "src": "341:8:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_BridgeContract_$54",
-                                  "typeString": "contract BridgeContract"
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               }
                             ],
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_BridgeContract_$54",
-                                  "typeString": "contract BridgeContract"
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               ],
-                              "id": 76,
+                              "id": 21,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
                               "nodeType": "ElementaryTypeNameExpression",
-                              "src": "301:7:1",
+                              "src": "333:7:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_address_$",
                                 "typeString": "type(address)"
                               },
                               "typeName": {
-                                "id": 75,
+                                "id": 20,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
-                                "src": "301:7:1",
+                                "src": "333:7:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": null,
                                   "typeString": null
                                 }
                               }
                             },
-                            "id": 78,
+                            "id": 23,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -512,7 +506,7 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "301:17:1",
+                            "src": "333:17:0",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -521,12 +515,12 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 79,
+                            "id": 24,
                             "name": "amount",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 67,
-                            "src": "320:6:1",
+                            "referencedDeclaration": 12,
+                            "src": "352:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -544,18 +538,18 @@
                               "typeString": "uint256"
                             }
                           ],
-                          "id": 74,
+                          "id": 19,
                           "name": "transfer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 547,
-                          "src": "292:8:1",
+                          "referencedDeclaration": 836,
+                          "src": "324:8:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256) returns (bool)"
                           }
                         },
-                        "id": 80,
+                        "id": 25,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -563,7 +557,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "292:35:1",
+                        "src": "324:35:0",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -578,7 +572,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 73,
+                      "id": 18,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -586,13 +580,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "284:7:1",
+                      "src": "316:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 81,
+                    "id": 26,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -600,119 +594,42 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "284:44:1",
+                    "src": "316:44:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 82,
+                  "id": 27,
                   "nodeType": "ExpressionStatement",
-                  "src": "284:44:1"
+                  "src": "316:44:0"
                 },
                 {
-                  "expression": {
+                  "eventCall": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 84,
-                          "name": "msg",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": -15,
-                          "src": "350:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_magic_message",
-                            "typeString": "msg"
-                          }
-                        },
-                        "id": 85,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "memberName": "sender",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "350:10:1",
+                        "id": 29,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "387:8:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeString": "contract RivendellNetworkBridgeContract"
                         }
                       },
                       {
                         "argumentTypes": null,
-                        "arguments": [
-                          {
-                            "argumentTypes": null,
-                            "id": 88,
-                            "name": "receiver",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 65,
-                            "src": "370:8:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_BridgeContract_$54",
-                              "typeString": "contract BridgeContract"
-                            }
-                          }
-                        ],
-                        "expression": {
-                          "argumentTypes": [
-                            {
-                              "typeIdentifier": "t_contract$_BridgeContract_$54",
-                              "typeString": "contract BridgeContract"
-                            }
-                          ],
-                          "id": 87,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "lValueRequested": false,
-                          "nodeType": "ElementaryTypeNameExpression",
-                          "src": "362:7:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_address_$",
-                            "typeString": "type(address)"
-                          },
-                          "typeName": {
-                            "id": 86,
-                            "name": "address",
-                            "nodeType": "ElementaryTypeName",
-                            "src": "362:7:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": null,
-                              "typeString": null
-                            }
-                          }
-                        },
-                        "id": 89,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "kind": "typeConversion",
-                        "lValueRequested": false,
-                        "names": [],
-                        "nodeType": "FunctionCall",
-                        "src": "362:17:1",
-                        "tryCall": false,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "id": 90,
+                        "id": 30,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
-                        "src": "381:6:1",
+                        "referencedDeclaration": 12,
+                        "src": "397:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -722,30 +639,26 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
-                        },
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeString": "contract RivendellNetworkBridgeContract"
                         },
                         {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 83,
+                      "id": 28,
                       "name": "ERC677Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 115,
-                      "src": "335:14:1",
+                      "referencedDeclaration": 53,
+                      "src": "372:14:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
-                        "typeString": "function (address,address,uint256)"
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_RivendellNetworkBridgeContract_$344_$_t_uint256_$returns$__$",
+                        "typeString": "function (contract RivendellNetworkBridgeContract,uint256)"
                       }
                     },
-                    "id": 91,
+                    "id": 31,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -753,16 +666,16 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "335:53:1",
+                    "src": "372:32:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 92,
-                  "nodeType": "ExpressionStatement",
-                  "src": "335:53:1"
+                  "id": 32,
+                  "nodeType": "EmitStatement",
+                  "src": "367:37:0"
                 },
                 {
                   "expression": {
@@ -775,18 +688,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 96,
+                              "id": 36,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": -15,
-                              "src": "428:3:1",
+                              "src": "442:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 97,
+                            "id": 37,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -794,7 +707,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "428:10:1",
+                            "src": "442:10:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -802,12 +715,12 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 98,
+                            "id": 38,
                             "name": "amount",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 67,
-                            "src": "440:6:1",
+                            "referencedDeclaration": 12,
+                            "src": "454:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -827,32 +740,32 @@
                           ],
                           "expression": {
                             "argumentTypes": null,
-                            "id": 94,
+                            "id": 34,
                             "name": "receiver",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 65,
-                            "src": "403:8:1",
+                            "referencedDeclaration": 10,
+                            "src": "419:8:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_BridgeContract_$54",
-                              "typeString": "contract BridgeContract"
+                              "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                              "typeString": "contract RivendellNetworkBridgeContract"
                             }
                           },
-                          "id": 95,
+                          "id": 35,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberName": "onTokenTransfer",
+                          "memberName": "receiveTokens",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 53,
-                          "src": "403:24:1",
+                          "referencedDeclaration": 269,
+                          "src": "419:22:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256) external returns (bool)"
                           }
                         },
-                        "id": 99,
+                        "id": 39,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -860,7 +773,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "403:44:1",
+                        "src": "419:42:0",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -875,7 +788,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 93,
+                      "id": 33,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -883,13 +796,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "395:7:1",
+                      "src": "411:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 100,
+                    "id": 40,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -897,61 +810,61 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "395:53:1",
+                    "src": "411:51:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 101,
+                  "id": 41,
                   "nodeType": "ExpressionStatement",
-                  "src": "395:53:1"
+                  "src": "411:51:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "1296ee62",
-            "id": 103,
+            "id": 43,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transferAndCall",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 69,
+              "id": 14,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
-              "src": "254:8:1"
+              "src": "286:8:0"
             },
             "parameters": {
-              "id": 68,
+              "id": 13,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 65,
+                  "id": 10,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 103,
-                  "src": "209:23:1",
+                  "scope": 43,
+                  "src": "225:39:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_BridgeContract_$54",
-                    "typeString": "contract BridgeContract"
+                    "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                    "typeString": "contract RivendellNetworkBridgeContract"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 64,
-                    "name": "BridgeContract",
+                    "id": 9,
+                    "name": "RivendellNetworkBridgeContract",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 54,
-                    "src": "209:14:1",
+                    "referencedDeclaration": 344,
+                    "src": "225:30:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_BridgeContract_$54",
-                      "typeString": "contract BridgeContract"
+                      "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                      "typeString": "contract RivendellNetworkBridgeContract"
                     }
                   },
                   "value": null,
@@ -959,12 +872,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 67,
+                  "id": 12,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 103,
-                  "src": "234:11:1",
+                  "scope": 43,
+                  "src": "266:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -972,10 +885,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 66,
+                    "id": 11,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "234:4:1",
+                    "src": "266:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -985,20 +898,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "208:38:1"
+              "src": "224:54:0"
             },
             "returnParameters": {
-              "id": 72,
+              "id": 17,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 71,
+                  "id": 16,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 103,
-                  "src": "272:4:1",
+                  "scope": 43,
+                  "src": "304:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1006,10 +919,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 70,
+                    "id": 15,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "272:4:1",
+                    "src": "304:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1019,33 +932,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "271:6:1"
+              "src": "303:6:0"
             },
-            "scope": 104,
-            "src": "184:269:1",
+            "scope": 44,
+            "src": "200:267:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 105,
-        "src": "137:318:1"
+        "scope": 45,
+        "src": "153:316:0"
       }
     ],
-    "src": "0:456:1"
+    "src": "0:470:0"
   },
   "legacyAST": {
     "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol",
     "exportedSymbols": {
       "ERC677": [
-        104
+        44
       ]
     },
-    "id": 105,
+    "id": 45,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 56,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -1053,38 +966,38 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:23:0"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "id": 57,
+        "id": 2,
         "nodeType": "ImportDirective",
-        "scope": 105,
-        "sourceUnit": 916,
-        "src": "25:55:1",
+        "scope": 45,
+        "sourceUnit": 1205,
+        "src": "25:55:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
         "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol",
         "file": "./IERC677.sol",
-        "id": 58,
+        "id": 3,
         "nodeType": "ImportDirective",
-        "scope": 105,
-        "sourceUnit": 126,
-        "src": "81:23:1",
+        "scope": 45,
+        "sourceUnit": 64,
+        "src": "81:23:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/BridgeContract.sol",
-        "file": "./BridgeContract.sol",
-        "id": 59,
+        "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/RivendellNetworkBridgeContract.sol",
+        "file": "./RivendellNetworkBridgeContract.sol",
+        "id": 4,
         "nodeType": "ImportDirective",
-        "scope": 105,
-        "sourceUnit": 55,
-        "src": "105:30:1",
+        "scope": 45,
+        "sourceUnit": 345,
+        "src": "105:46:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -1095,67 +1008,67 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 60,
+              "id": 5,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 915,
-              "src": "165:5:1",
+              "referencedDeclaration": 1204,
+              "src": "181:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$915",
+                "typeIdentifier": "t_contract$_ERC20_$1204",
                 "typeString": "contract ERC20"
               }
             },
-            "id": 61,
+            "id": 6,
             "nodeType": "InheritanceSpecifier",
-            "src": "165:5:1"
+            "src": "181:5:0"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 62,
+              "id": 7,
               "name": "IERC677",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 125,
-              "src": "172:7:1",
+              "referencedDeclaration": 63,
+              "src": "188:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IERC677_$125",
+                "typeIdentifier": "t_contract$_IERC677_$63",
                 "typeString": "contract IERC677"
               }
             },
-            "id": 63,
+            "id": 8,
             "nodeType": "InheritanceSpecifier",
-            "src": "172:7:1"
+            "src": "188:7:0"
           }
         ],
         "contractDependencies": [
-          125,
-          240,
-          915,
-          984
+          63,
+          426,
+          1204,
+          1273
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 104,
+        "id": 44,
         "linearizedBaseContracts": [
-          104,
-          125,
-          915,
-          984,
-          240
+          44,
+          63,
+          1204,
+          1273,
+          426
         ],
         "name": "ERC677",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "baseFunctions": [
-              124
+              62
             ],
             "body": {
-              "id": 102,
+              "id": 42,
               "nodeType": "Block",
-              "src": "278:175:1",
+              "src": "310:157:0",
               "statements": [
                 {
                   "expression": {
@@ -1169,48 +1082,48 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 77,
+                                "id": 22,
                                 "name": "receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 65,
-                                "src": "309:8:1",
+                                "referencedDeclaration": 10,
+                                "src": "341:8:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_BridgeContract_$54",
-                                  "typeString": "contract BridgeContract"
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               }
                             ],
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_BridgeContract_$54",
-                                  "typeString": "contract BridgeContract"
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               ],
-                              "id": 76,
+                              "id": 21,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
                               "nodeType": "ElementaryTypeNameExpression",
-                              "src": "301:7:1",
+                              "src": "333:7:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_address_$",
                                 "typeString": "type(address)"
                               },
                               "typeName": {
-                                "id": 75,
+                                "id": 20,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
-                                "src": "301:7:1",
+                                "src": "333:7:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": null,
                                   "typeString": null
                                 }
                               }
                             },
-                            "id": 78,
+                            "id": 23,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1218,7 +1131,7 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "301:17:1",
+                            "src": "333:17:0",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1227,12 +1140,12 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 79,
+                            "id": 24,
                             "name": "amount",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 67,
-                            "src": "320:6:1",
+                            "referencedDeclaration": 12,
+                            "src": "352:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1250,18 +1163,18 @@
                               "typeString": "uint256"
                             }
                           ],
-                          "id": 74,
+                          "id": 19,
                           "name": "transfer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 547,
-                          "src": "292:8:1",
+                          "referencedDeclaration": 836,
+                          "src": "324:8:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256) returns (bool)"
                           }
                         },
-                        "id": 80,
+                        "id": 25,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1269,7 +1182,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "292:35:1",
+                        "src": "324:35:0",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1284,7 +1197,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 73,
+                      "id": 18,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -1292,13 +1205,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "284:7:1",
+                      "src": "316:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 81,
+                    "id": 26,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1306,119 +1219,42 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "284:44:1",
+                    "src": "316:44:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 82,
+                  "id": 27,
                   "nodeType": "ExpressionStatement",
-                  "src": "284:44:1"
+                  "src": "316:44:0"
                 },
                 {
-                  "expression": {
+                  "eventCall": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 84,
-                          "name": "msg",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": -15,
-                          "src": "350:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_magic_message",
-                            "typeString": "msg"
-                          }
-                        },
-                        "id": 85,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "memberName": "sender",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "350:10:1",
+                        "id": 29,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "387:8:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeString": "contract RivendellNetworkBridgeContract"
                         }
                       },
                       {
                         "argumentTypes": null,
-                        "arguments": [
-                          {
-                            "argumentTypes": null,
-                            "id": 88,
-                            "name": "receiver",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 65,
-                            "src": "370:8:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_BridgeContract_$54",
-                              "typeString": "contract BridgeContract"
-                            }
-                          }
-                        ],
-                        "expression": {
-                          "argumentTypes": [
-                            {
-                              "typeIdentifier": "t_contract$_BridgeContract_$54",
-                              "typeString": "contract BridgeContract"
-                            }
-                          ],
-                          "id": 87,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "lValueRequested": false,
-                          "nodeType": "ElementaryTypeNameExpression",
-                          "src": "362:7:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_address_$",
-                            "typeString": "type(address)"
-                          },
-                          "typeName": {
-                            "id": 86,
-                            "name": "address",
-                            "nodeType": "ElementaryTypeName",
-                            "src": "362:7:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": null,
-                              "typeString": null
-                            }
-                          }
-                        },
-                        "id": 89,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "kind": "typeConversion",
-                        "lValueRequested": false,
-                        "names": [],
-                        "nodeType": "FunctionCall",
-                        "src": "362:17:1",
-                        "tryCall": false,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "id": 90,
+                        "id": 30,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
-                        "src": "381:6:1",
+                        "referencedDeclaration": 12,
+                        "src": "397:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1428,30 +1264,26 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
-                        },
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeString": "contract RivendellNetworkBridgeContract"
                         },
                         {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 83,
+                      "id": 28,
                       "name": "ERC677Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 115,
-                      "src": "335:14:1",
+                      "referencedDeclaration": 53,
+                      "src": "372:14:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
-                        "typeString": "function (address,address,uint256)"
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_RivendellNetworkBridgeContract_$344_$_t_uint256_$returns$__$",
+                        "typeString": "function (contract RivendellNetworkBridgeContract,uint256)"
                       }
                     },
-                    "id": 91,
+                    "id": 31,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1459,16 +1291,16 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "335:53:1",
+                    "src": "372:32:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 92,
-                  "nodeType": "ExpressionStatement",
-                  "src": "335:53:1"
+                  "id": 32,
+                  "nodeType": "EmitStatement",
+                  "src": "367:37:0"
                 },
                 {
                   "expression": {
@@ -1481,18 +1313,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 96,
+                              "id": 36,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": -15,
-                              "src": "428:3:1",
+                              "src": "442:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 97,
+                            "id": 37,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1500,7 +1332,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "428:10:1",
+                            "src": "442:10:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -1508,12 +1340,12 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 98,
+                            "id": 38,
                             "name": "amount",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 67,
-                            "src": "440:6:1",
+                            "referencedDeclaration": 12,
+                            "src": "454:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1533,32 +1365,32 @@
                           ],
                           "expression": {
                             "argumentTypes": null,
-                            "id": 94,
+                            "id": 34,
                             "name": "receiver",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 65,
-                            "src": "403:8:1",
+                            "referencedDeclaration": 10,
+                            "src": "419:8:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_BridgeContract_$54",
-                              "typeString": "contract BridgeContract"
+                              "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                              "typeString": "contract RivendellNetworkBridgeContract"
                             }
                           },
-                          "id": 95,
+                          "id": 35,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberName": "onTokenTransfer",
+                          "memberName": "receiveTokens",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 53,
-                          "src": "403:24:1",
+                          "referencedDeclaration": 269,
+                          "src": "419:22:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256) external returns (bool)"
                           }
                         },
-                        "id": 99,
+                        "id": 39,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1566,7 +1398,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "403:44:1",
+                        "src": "419:42:0",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1581,7 +1413,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 93,
+                      "id": 33,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -1589,13 +1421,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "395:7:1",
+                      "src": "411:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 100,
+                    "id": 40,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1603,61 +1435,61 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "395:53:1",
+                    "src": "411:51:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 101,
+                  "id": 41,
                   "nodeType": "ExpressionStatement",
-                  "src": "395:53:1"
+                  "src": "411:51:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "1296ee62",
-            "id": 103,
+            "id": 43,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transferAndCall",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 69,
+              "id": 14,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
-              "src": "254:8:1"
+              "src": "286:8:0"
             },
             "parameters": {
-              "id": 68,
+              "id": 13,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 65,
+                  "id": 10,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 103,
-                  "src": "209:23:1",
+                  "scope": 43,
+                  "src": "225:39:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_BridgeContract_$54",
-                    "typeString": "contract BridgeContract"
+                    "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                    "typeString": "contract RivendellNetworkBridgeContract"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 64,
-                    "name": "BridgeContract",
+                    "id": 9,
+                    "name": "RivendellNetworkBridgeContract",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 54,
-                    "src": "209:14:1",
+                    "referencedDeclaration": 344,
+                    "src": "225:30:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_BridgeContract_$54",
-                      "typeString": "contract BridgeContract"
+                      "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                      "typeString": "contract RivendellNetworkBridgeContract"
                     }
                   },
                   "value": null,
@@ -1665,12 +1497,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 67,
+                  "id": 12,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 103,
-                  "src": "234:11:1",
+                  "scope": 43,
+                  "src": "266:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1678,10 +1510,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 66,
+                    "id": 11,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "234:4:1",
+                    "src": "266:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1691,20 +1523,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "208:38:1"
+              "src": "224:54:0"
             },
             "returnParameters": {
-              "id": 72,
+              "id": 17,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 71,
+                  "id": 16,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 103,
-                  "src": "272:4:1",
+                  "scope": 43,
+                  "src": "304:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1712,10 +1544,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 70,
+                    "id": 15,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "272:4:1",
+                    "src": "304:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1725,20 +1557,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "271:6:1"
+              "src": "303:6:0"
             },
-            "scope": 104,
-            "src": "184:269:1",
+            "scope": 44,
+            "src": "200:267:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 105,
-        "src": "137:318:1"
+        "scope": 45,
+        "src": "153:316:0"
       }
     ],
-    "src": "0:456:1"
+    "src": "0:470:0"
   },
   "compiler": {
     "name": "solc",
@@ -1746,7 +1578,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-10-27T20:47:33.937Z",
+  "updatedAt": "2020-11-11T23:33:59.237Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

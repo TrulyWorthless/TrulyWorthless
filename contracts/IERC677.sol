@@ -1,9 +1,9 @@
 pragma solidity ^0.6.0;
 
-import "./BridgeContract.sol";
+import "./RivendellNetworkBridgeContract.sol";
 
 interface IERC677 {
-  event ERC677Transfer(address sender, address receiver, uint256 amount);
+  event ERC677Transfer(RivendellNetworkBridgeContract receiver, uint256 amount);
 
-  function transferAndCall(BridgeContract receiver, uint256 amount) external returns (bool);
+  function transferAndCall(RivendellNetworkBridgeContract receiver, uint256 amount) external returns (bool);
 }
