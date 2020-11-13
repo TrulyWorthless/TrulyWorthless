@@ -10,6 +10,6 @@ abstract contract ERC677 is ERC20, IERC677 {
 
     emit ERC677Transfer(receiver, amount);
 
-    require(receiver.receiveTokens(msg.sender, amount));
+    require(receiver.onTokenTransfer(msg.sender, amount));
   }
 }

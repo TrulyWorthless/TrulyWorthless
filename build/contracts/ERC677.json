@@ -315,12 +315,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"contract RivendellNetworkBridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"subtractedValue\",\"type\":\"uint256\"}],\"name\":\"decreaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"addedValue\",\"type\":\"uint256\"}],\"name\":\"increaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract RivendellNetworkBridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferAndCall\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"allowance(address,address)\":{\"details\":\"See {IERC20-allowance}.\"},\"approve(address,uint256)\":{\"details\":\"See {IERC20-approve}.     * Requirements:     * - `spender` cannot be the zero address.\"},\"balanceOf(address)\":{\"details\":\"See {IERC20-balanceOf}.\"},\"decimals()\":{\"details\":\"Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5,05` (`505 / 10 ** 2`).     * Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is called.     * NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}.\"},\"decreaseAllowance(address,uint256)\":{\"details\":\"Atomically decreases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`.\"},\"increaseAllowance(address,uint256)\":{\"details\":\"Atomically increases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address.\"},\"name()\":{\"details\":\"Returns the name of the token.\"},\"symbol()\":{\"details\":\"Returns the symbol of the token, usually a shorter version of the name.\"},\"totalSupply()\":{\"details\":\"See {IERC20-totalSupply}.\"},\"transfer(address,uint256)\":{\"details\":\"See {IERC20-transfer}.     * Requirements:     * - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"See {IERC20-transferFrom}.     * Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20};     * Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":\"ERC677\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":{\"keccak256\":\"0xd15560d7890f314ae0ca7f86b554d9478b4ced270d27c7e1798f25ae43e94b0a\",\"urls\":[\"bzz-raw://643d019d38cfd1c5e2922222ac15371e38092ee93ee8ed96710db3702ab7e613\",\"dweb:/ipfs/QmXBT94N3jjvyx4vuVhEEhesY5E2RNsA1gAuYRexuwHNDf\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":{\"keccak256\":\"0xba603cced3380122fc47c3c78c9dfbb77441eb81b82dae375e24448bdf647757\",\"urls\":[\"bzz-raw://988a99de9e3e1a66d4cfcc139e4d89358478e72c5825b0744d98e286b7098119\",\"dweb:/ipfs/QmUbpbz4TLkThddBMxp93adEMBZj1AQVtKCcv69h33o18y\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/RivendellNetworkBridgeContract.sol\":{\"keccak256\":\"0xa243e99a01f1577f0a5bbc95e5086efaefea6a734bf6e317d6354ad22db26b1e\",\"urls\":[\"bzz-raw://74d6ff4e220d8511ee60f9f75159db413d4b13f54f8e4a377e5f3c00878aa130\",\"dweb:/ipfs/QmdMvGDerQY1a7peUr5PRUywJ5oZX9uFu3nnUsHbr5UTzn\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"contract RivendellNetworkBridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ERC677Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"subtractedValue\",\"type\":\"uint256\"}],\"name\":\"decreaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"addedValue\",\"type\":\"uint256\"}],\"name\":\"increaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract RivendellNetworkBridgeContract\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferAndCall\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"allowance(address,address)\":{\"details\":\"See {IERC20-allowance}.\"},\"approve(address,uint256)\":{\"details\":\"See {IERC20-approve}.     * Requirements:     * - `spender` cannot be the zero address.\"},\"balanceOf(address)\":{\"details\":\"See {IERC20-balanceOf}.\"},\"decimals()\":{\"details\":\"Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5,05` (`505 / 10 ** 2`).     * Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is called.     * NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}.\"},\"decreaseAllowance(address,uint256)\":{\"details\":\"Atomically decreases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`.\"},\"increaseAllowance(address,uint256)\":{\"details\":\"Atomically increases the allowance granted to `spender` by the caller.     * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.     * Emits an {Approval} event indicating the updated allowance.     * Requirements:     * - `spender` cannot be the zero address.\"},\"name()\":{\"details\":\"Returns the name of the token.\"},\"symbol()\":{\"details\":\"Returns the symbol of the token, usually a shorter version of the name.\"},\"totalSupply()\":{\"details\":\"See {IERC20-totalSupply}.\"},\"transfer(address,uint256)\":{\"details\":\"See {IERC20-transfer}.     * Requirements:     * - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"See {IERC20-transferFrom}.     * Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20};     * Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":\"ERC677\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol\":{\"keccak256\":\"0x81880af06a0568ddc4d4f28a398c3e5688b89434ca0082a5abee9d8b563c978d\",\"urls\":[\"bzz-raw://31f3a4e36f00e1054179ee3a7d04270cab535e284233729a90ef5ec4cb5d50f1\",\"dweb:/ipfs/QmSSXw2VEwcu8Qxw7z7JCE9xTYAAQHhmA7LkBzEQvXQ1Zc\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/IERC677.sol\":{\"keccak256\":\"0xba603cced3380122fc47c3c78c9dfbb77441eb81b82dae375e24448bdf647757\",\"urls\":[\"bzz-raw://988a99de9e3e1a66d4cfcc139e4d89358478e72c5825b0744d98e286b7098119\",\"dweb:/ipfs/QmUbpbz4TLkThddBMxp93adEMBZj1AQVtKCcv69h33o18y\"]},\"/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/RivendellNetworkBridgeContract.sol\":{\"keccak256\":\"0x54a6e7be70bef0fead3abc2feeceee9c362bf26c7300e1a86fe5f6fe11323791\",\"urls\":[\"bzz-raw://f340b8555d1fdcb8a562e7dfc28f6201db10f215c663a980413bd045624d4a1a\",\"dweb:/ipfs/QmXKSyNmyXmu36j7ZD5NC29eFWxgqZuJGu4VL2VmA9avF7\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x91e0bd6a6762d2a1700dab0849de8422611355100576c4beef1e80d82a4104a0\",\"urls\":[\"bzz-raw://73bbd77af0a8b07255d2ffa20728bcf13b116007c9ddac5d37046cfabb0e1e02\",\"dweb:/ipfs/QmRgZgWCWCSMTTaok6o4QvWA6MgB4goS8qpb3sN7bAvaZ9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\nimport \"./IERC677.sol\";\nimport \"./RivendellNetworkBridgeContract.sol\";\n\nabstract contract ERC677 is ERC20, IERC677 {\n  function transferAndCall(RivendellNetworkBridgeContract receiver, uint amount) public override returns (bool) {\n    require(transfer(address(receiver), amount));\n\n    emit ERC677Transfer(receiver, amount);\n\n    require(receiver.receiveTokens(msg.sender, amount));\n  }\n}\n",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\nimport \"./IERC677.sol\";\nimport \"./RivendellNetworkBridgeContract.sol\";\n\nabstract contract ERC677 is ERC20, IERC677 {\n  function transferAndCall(RivendellNetworkBridgeContract receiver, uint amount) public override returns (bool) {\n    require(transfer(address(receiver), amount));\n\n    emit ERC677Transfer(receiver, amount);\n\n    require(receiver.onTokenTransfer(msg.sender, amount));\n  }\n}\n",
   "sourcePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol",
   "ast": {
     "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol",
@@ -349,7 +349,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 45,
-        "sourceUnit": 1205,
+        "sourceUnit": 1283,
         "src": "25:55:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -371,7 +371,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 45,
-        "sourceUnit": 345,
+        "sourceUnit": 423,
         "src": "105:46:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -386,10 +386,10 @@
               "id": 5,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1204,
+              "referencedDeclaration": 1282,
               "src": "181:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$1204",
+                "typeIdentifier": "t_contract$_ERC20_$1282",
                 "typeString": "contract ERC20"
               }
             },
@@ -418,9 +418,9 @@
         ],
         "contractDependencies": [
           63,
-          426,
-          1204,
-          1273
+          504,
+          1282,
+          1351
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -429,9 +429,9 @@
         "linearizedBaseContracts": [
           44,
           63,
-          1204,
-          1273,
-          426
+          1282,
+          1351,
+          504
         ],
         "name": "ERC677",
         "nodeType": "ContractDefinition",
@@ -443,7 +443,7 @@
             "body": {
               "id": 42,
               "nodeType": "Block",
-              "src": "310:157:0",
+              "src": "310:159:0",
               "statements": [
                 {
                   "expression": {
@@ -464,7 +464,7 @@
                                 "referencedDeclaration": 10,
                                 "src": "341:8:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                                   "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               }
@@ -472,7 +472,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                                   "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               ],
@@ -542,7 +542,7 @@
                           "name": "transfer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 836,
+                          "referencedDeclaration": 914,
                           "src": "324:8:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -618,7 +618,7 @@
                         "referencedDeclaration": 10,
                         "src": "387:8:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                           "typeString": "contract RivendellNetworkBridgeContract"
                         }
                       },
@@ -639,7 +639,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                           "typeString": "contract RivendellNetworkBridgeContract"
                         },
                         {
@@ -654,7 +654,7 @@
                       "referencedDeclaration": 53,
                       "src": "372:14:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_RivendellNetworkBridgeContract_$344_$_t_uint256_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_RivendellNetworkBridgeContract_$422_$_t_uint256_$returns$__$",
                         "typeString": "function (contract RivendellNetworkBridgeContract,uint256)"
                       }
                     },
@@ -693,7 +693,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": -15,
-                              "src": "442:3:0",
+                              "src": "444:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
@@ -707,7 +707,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "442:10:0",
+                            "src": "444:10:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -720,7 +720,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 12,
-                            "src": "454:6:0",
+                            "src": "456:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -747,7 +747,7 @@
                             "referencedDeclaration": 10,
                             "src": "419:8:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                              "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                               "typeString": "contract RivendellNetworkBridgeContract"
                             }
                           },
@@ -756,10 +756,10 @@
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberName": "receiveTokens",
+                          "memberName": "onTokenTransfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 269,
-                          "src": "419:22:0",
+                          "referencedDeclaration": 347,
+                          "src": "419:24:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256) external returns (bool)"
@@ -773,7 +773,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "419:42:0",
+                        "src": "419:44:0",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -810,7 +810,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "411:51:0",
+                    "src": "411:53:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -819,7 +819,7 @@
                   },
                   "id": 41,
                   "nodeType": "ExpressionStatement",
-                  "src": "411:51:0"
+                  "src": "411:53:0"
                 }
               ]
             },
@@ -852,7 +852,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                    "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                     "typeString": "contract RivendellNetworkBridgeContract"
                   },
                   "typeName": {
@@ -860,10 +860,10 @@
                     "id": 9,
                     "name": "RivendellNetworkBridgeContract",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 344,
+                    "referencedDeclaration": 422,
                     "src": "225:30:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                      "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                       "typeString": "contract RivendellNetworkBridgeContract"
                     }
                   },
@@ -935,17 +935,17 @@
               "src": "303:6:0"
             },
             "scope": 44,
-            "src": "200:267:0",
+            "src": "200:269:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 45,
-        "src": "153:316:0"
+        "src": "153:318:0"
       }
     ],
-    "src": "0:470:0"
+    "src": "0:472:0"
   },
   "legacyAST": {
     "absolutePath": "/Users/amirshirif/Documents/Solidity/TrulyWorthless/contracts/ERC677.sol",
@@ -974,7 +974,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 45,
-        "sourceUnit": 1205,
+        "sourceUnit": 1283,
         "src": "25:55:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -996,7 +996,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 45,
-        "sourceUnit": 345,
+        "sourceUnit": 423,
         "src": "105:46:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1011,10 +1011,10 @@
               "id": 5,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1204,
+              "referencedDeclaration": 1282,
               "src": "181:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$1204",
+                "typeIdentifier": "t_contract$_ERC20_$1282",
                 "typeString": "contract ERC20"
               }
             },
@@ -1043,9 +1043,9 @@
         ],
         "contractDependencies": [
           63,
-          426,
-          1204,
-          1273
+          504,
+          1282,
+          1351
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1054,9 +1054,9 @@
         "linearizedBaseContracts": [
           44,
           63,
-          1204,
-          1273,
-          426
+          1282,
+          1351,
+          504
         ],
         "name": "ERC677",
         "nodeType": "ContractDefinition",
@@ -1068,7 +1068,7 @@
             "body": {
               "id": 42,
               "nodeType": "Block",
-              "src": "310:157:0",
+              "src": "310:159:0",
               "statements": [
                 {
                   "expression": {
@@ -1089,7 +1089,7 @@
                                 "referencedDeclaration": 10,
                                 "src": "341:8:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                                   "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               }
@@ -1097,7 +1097,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                                  "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                                   "typeString": "contract RivendellNetworkBridgeContract"
                                 }
                               ],
@@ -1167,7 +1167,7 @@
                           "name": "transfer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 836,
+                          "referencedDeclaration": 914,
                           "src": "324:8:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -1243,7 +1243,7 @@
                         "referencedDeclaration": 10,
                         "src": "387:8:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                           "typeString": "contract RivendellNetworkBridgeContract"
                         }
                       },
@@ -1264,7 +1264,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                          "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                           "typeString": "contract RivendellNetworkBridgeContract"
                         },
                         {
@@ -1279,7 +1279,7 @@
                       "referencedDeclaration": 53,
                       "src": "372:14:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_RivendellNetworkBridgeContract_$344_$_t_uint256_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_RivendellNetworkBridgeContract_$422_$_t_uint256_$returns$__$",
                         "typeString": "function (contract RivendellNetworkBridgeContract,uint256)"
                       }
                     },
@@ -1318,7 +1318,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": -15,
-                              "src": "442:3:0",
+                              "src": "444:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
@@ -1332,7 +1332,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "442:10:0",
+                            "src": "444:10:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -1345,7 +1345,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 12,
-                            "src": "454:6:0",
+                            "src": "456:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1372,7 +1372,7 @@
                             "referencedDeclaration": 10,
                             "src": "419:8:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                              "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                               "typeString": "contract RivendellNetworkBridgeContract"
                             }
                           },
@@ -1381,10 +1381,10 @@
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberName": "receiveTokens",
+                          "memberName": "onTokenTransfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 269,
-                          "src": "419:22:0",
+                          "referencedDeclaration": 347,
+                          "src": "419:24:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256) external returns (bool)"
@@ -1398,7 +1398,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "419:42:0",
+                        "src": "419:44:0",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1435,7 +1435,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "411:51:0",
+                    "src": "411:53:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -1444,7 +1444,7 @@
                   },
                   "id": 41,
                   "nodeType": "ExpressionStatement",
-                  "src": "411:51:0"
+                  "src": "411:53:0"
                 }
               ]
             },
@@ -1477,7 +1477,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                    "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                     "typeString": "contract RivendellNetworkBridgeContract"
                   },
                   "typeName": {
@@ -1485,10 +1485,10 @@
                     "id": 9,
                     "name": "RivendellNetworkBridgeContract",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 344,
+                    "referencedDeclaration": 422,
                     "src": "225:30:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$344",
+                      "typeIdentifier": "t_contract$_RivendellNetworkBridgeContract_$422",
                       "typeString": "contract RivendellNetworkBridgeContract"
                     }
                   },
@@ -1560,17 +1560,17 @@
               "src": "303:6:0"
             },
             "scope": 44,
-            "src": "200:267:0",
+            "src": "200:269:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 45,
-        "src": "153:316:0"
+        "src": "153:318:0"
       }
     ],
-    "src": "0:470:0"
+    "src": "0:472:0"
   },
   "compiler": {
     "name": "solc",
@@ -1578,7 +1578,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-11-11T23:33:59.237Z",
+  "updatedAt": "2020-11-13T23:39:58.010Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {
