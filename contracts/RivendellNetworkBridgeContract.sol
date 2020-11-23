@@ -14,35 +14,40 @@ contract RivendellNetworkBridgeContract is Ownable {
 
   mapping(string => bool) internal previousTransactions;
   transaction[] internal queuedTransactions;
-  ERC677 internal token;
+  uint256 internal nonce;
+  ERC677 constant internal token = ERC677(0x20cdE6cF3E99848C0d828877B4190fcd1357727c);
 
-  constructor() public Ownable() {
-    token = ERC677(0xaEe8Cfd6C351EF2F0c53fE963F4112043d371E6a);//change
+  constructor() public Ownable() {}
+
+  function retrieveFunds(uint256 amount) public onlyOwner {
+    require(token.transferFrom(msg.sender, address(this), amount), "RivendellNetworkBridgeContract: Funds not retrieve");
+  }
+
+  function findBalance() public view returns (uint256) {
+    return token.balanceOf(address(this));
   }
 
   function allocateTokens(address recipient, uint256 amount, string calldata transactionHash) external onlyOwner returns (bool) {
-    require(!previousTransactions[transactionHash]);
+    require(!previousTransactions[transactionHash], "RivendellNetworkBridgeContract: transaction has already been recorded");
     previousTransactions[transactionHash] = true;
-    require(token.transfer(recipient, amount));
+    require(token.transfer(recipient, amount), "RivendellNetworkBridgeContract: transfer was not executed");
     emit ERC677Allocated(recipient, amount);
   }
 
   function onTokenTransfer(address sender, uint256 amount) external returns (bool) {
-    require(msg.sender == address(token));
+    require(msg.sender == address(token), "RivendellNetworkBridgeContract: sender needs to be ERC677 token");
     queuedTransactions.push(transaction(sender, amount));
     emit ERC677Received(sender, amount);
+    nonce++;
+    return true;
   }
 
-  function getTransactions() external onlyOwner returns (address[] memory, uint256[] memory) {
-    address[] memory addresses = new address[](queuedTransactions.length);
-    uint256[] memory amounts = new uint256[](queuedTransactions.length);
+  function getCurrentNonce() external view returns (uint256) {
+    return nonce - 1;
+  }
 
-    for (uint i = 0; i < queuedTransactions.length; i++) {
-      addresses[i] = queuedTransactions[i].sender;
-      amounts[i] = queuedTransactions[i].amount;
-    }
-
-    delete queuedTransactions;
-    return (addresses, amounts);
+  function getTransactions(uint256 index) external view returns (address, uint256) {
+    if (index >= nonce) return (address(0), uint256(0));
+    return (queuedTransactions[index].sender, queuedTransactions[index].amount);
   }
 }

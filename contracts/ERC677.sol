@@ -6,10 +6,10 @@ import "./RivendellNetworkBridgeContract.sol";
 
 abstract contract ERC677 is ERC20, IERC677 {
   function transferAndCall(RivendellNetworkBridgeContract receiver, uint amount) public override returns (bool) {
-    require(transfer(address(receiver), amount));
+    require(transfer(address(receiver), amount), "ERC677: transfer was not executed");
 
     emit ERC677Transfer(receiver, amount);
 
-    require(receiver.onTokenTransfer(msg.sender, amount));
+    require(receiver.onTokenTransfer(msg.sender, amount), "ERC677: Tokens were not restored");
   }
 }
