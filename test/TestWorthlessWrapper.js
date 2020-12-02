@@ -1,12 +1,15 @@
 const TokenContract = artifacts.require("WorthlessWrapper");
+const BridgeContract = artifacts.require("RivendellNetworkBridgeContract");
 
 contract("WorthlessWrapper", accounts => {
   const coinbase = accounts[0];
-  const bridge = accounts[1];
   var token;
+  var bridge;
 
   beforeEach(async () => {
-    token = await TokenContract.new()
+    token = await TokenContract.new();
+    // bridge = await BridgeContract.new();
+    bridge = accounts[1];
   });
 
   describe("Initial values", () => {
@@ -47,16 +50,26 @@ contract("WorthlessWrapper", accounts => {
     });
   });
 
-  describe("Mint and burn", () => {
-    it("The bridge value should be unassigned initially", async () => {
-      let bridge = await token.getBridge();
-      assert.equal(bridge, "0x0000000000000000000000000000000000000000", "The address is not empty");
-      assert.notEqual(bridge, coinbase, "There is an initial address");
+  describe("Mint and burn", () => {//todo
+    it("Mint to the correct address", async () => {
+      await token.setBridge(bridge);
+      let supply = await token.totalSupply();
+      assert.equal(supply, 0, "There was an initial supply");
+      try {
+        await token.mintAndCall(accounts[2], 10, {from: accounts[2]});
+      } catch (error) {
+        assert.equal(error.reason, "ERC677: minter needs to be bridge contract", "failed for reason other than 'Wrong Address'");
+      }
+
+      await token.mintAndCall(accounts[2], 10, {from: bridge});
+      let balance = await token.balanceOf(accounts[2]);
+      assert.equal(balance, 0, "The account did not receive the correct amount");
+      let newSupply = await token.totalSupply();
+      assert.equal(newSupply, 10, "The amount minted is not correct");
     });
 
-    it("The bridge value should be unassigned initially", async () => {
-      let bridge = await token.getBridge();
-      assert.notEqual(bridge, coinbase, "There is an initial address");
+    it("Burn from the correct address", async () => {
+      await token.setBridge(bridge);
     });
   });
 });
