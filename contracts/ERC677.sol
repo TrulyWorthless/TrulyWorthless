@@ -19,7 +19,7 @@ abstract contract ERC677 is ERC20, IERC677 {
 
   function mintAndCall(address _recipient, uint256 _amount) external override returns (bool) {
     require(msg.sender == address(bridge), "ERC677: minter needs to be bridge contract");
-    _mint(_recipient, _amount * (10 ** uint256(decimals())));
+    _mint(_recipient, _amount);
     return true;
   }
 

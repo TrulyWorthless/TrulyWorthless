@@ -30,6 +30,7 @@ contract MainnetBridgeContract is Ownable {
 
   function returnTokens(address _address, uint256 _amount, string calldata _transactionHash) external onlyOwner returns (bool) {
     require(!transactions[_transactionHash], "MainnetBridgeContract: transaction has already been recorded");
+    /* require(_amount != uint256(0), "MainnetBridgeContract: amount cannot be zero"); */
     transactions[_transactionHash] = true;
     require(token.transfer(_address, _amount), "MainnetBridgeContract: tokens were not returned");
     emit ERC20Returned(_address, _amount);
