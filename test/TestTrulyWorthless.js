@@ -51,6 +51,7 @@ contract("TrulyWorthless", accounts => {
       await token.approve(accounts[3], 10, {from: coinbase});
       await token.allowance(coinbase, accounts[3]);
       await token.increaseAllowance(accounts[3], 1, {from: coinbase});
+
       let increasedAllowance = await token.allowance(coinbase, accounts[3]);
       assert.equal(increasedAllowance, 11, "the allowance did not increase");
       await token.decreaseAllowance(accounts[3], 1, {from: coinbase});
@@ -65,6 +66,7 @@ contract("TrulyWorthless", accounts => {
       let allowance = await token.allowance(coinbase, accounts[3]);
       assert.equal(allowance, 10, "the allowance did not change");
       await token.transferFrom(coinbase, accounts[3], 10, {from: accounts[3]});
+      
       let newbalance = await token.balanceOf(accounts[3]);
       assert.equal(newbalance, 10, "Tokens were not transferred");
       let newAllowance = await token.allowance(coinbase, accounts[3]);
