@@ -1,0 +1,10 @@
+#Directories
+build/
+coverage/
+node_modules/
+
+!*/node_modules/@openzeppelin/
+
+#Files
+.DS_Store
+coverage.json

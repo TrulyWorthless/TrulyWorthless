@@ -1,0 +1,33 @@
+{
+  "name": "trulyworthless",
+  "version": "1.0.0",
+  "description": "ethereum",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.3.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "solidity-coverage": "^0.7.13",
+    "truffle": "^5.1.56"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amshirif/TrulyWorthless.git"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "author": "Amir Shirif",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amshirif/TrulyWorthless/issues"
+  },
+  "homepage": "https://github.com/amshirif/TrulyWorthless#readme"
+}
