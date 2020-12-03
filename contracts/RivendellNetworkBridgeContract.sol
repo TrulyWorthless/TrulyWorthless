@@ -35,11 +35,6 @@ contract RivendellNetworkBridgeContract is Ownable {
     return nonce;
   }
 
-  /* function retrieveFunds(uint256 _amount) public onlyOwner returns (bool) {
-    require(token.transferFrom(msg.sender, address(this), _amount), "RivendellNetworkBridgeContract: tokens not retrieve");
-    return true;
-  } */
-
   function allocateTokens(address _recipient, uint256 _amount, string calldata _transactionHash) external onlyOwner returns (bool) {
     require(!incomingTransactions[_transactionHash], "RivendellNetworkBridgeContract: transaction has already been recorded");
     incomingTransactions[_transactionHash] = true;

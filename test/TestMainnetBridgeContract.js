@@ -41,5 +41,43 @@ contract("MainnetBridgeContract", accounts => {
     });
   });
 
-  
+  describe("Transfer tokens", () => {
+    it("sending tokens to recipient", async () => {
+      await bridge.setToken(token.address);
+      let initialBalance = await token.balanceOf(bridge.address);
+      assert.equal(initialBalance, 0, "there should not be an initial balance");
+      await token.approve(bridge.address, 10);
+      await bridge.onTokenTransfer(10);
+      let finalBalance = await token.balanceOf(bridge.address);
+      assert.equal(finalBalance, 10, "tokens were not transferred");
+    });
+
+    it("receiving tokens", async () => {
+      await bridge.setToken(token.address);
+      await token.approve(bridge.address, 10);
+      await bridge.onTokenTransfer(10);
+
+      //transactionHash is of testing purposes only
+      await bridge.returnTokens(accounts[2], 10, token.transactionHash);
+
+      let balance = await token.balanceOf(bridge.address);
+      assert.equal(balance, 0, "tokens were not transferred");
+    });
+
+    it("repeat transactions", async () => {
+      await bridge.setToken(token.address);
+      await token.approve(bridge.address, 20);
+      await bridge.onTokenTransfer(20);
+
+      //transactionHash is of testing purposes only
+      await bridge.returnTokens(accounts[2], 10, token.transactionHash);
+
+      try {
+        await bridge.returnTokens(accounts[2], 10, token.transactionHash);
+        throw new Error("Error was not thrown");
+      } catch (error) {
+        assert.equal(error.reason, "MainnetBridgeContract: transaction has already been recorded", "failed for reason other than 'transaction has already been recorded'");
+      }
+    });
+  });
 });
