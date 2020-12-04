@@ -2,9 +2,13 @@
 build/
 coverage/
 node_modules/
+images/review/
+.coverage_artifacts
+.coverage_contracts
 
 !*/node_modules/@openzeppelin/
 
 #Files
 .DS_Store
 coverage.json
+commands.txt

@@ -13,22 +13,19 @@ contract("MainnetBridgeContract", accounts => {
 
   describe("Initial values", () => {
     it("The owner should be the account that deployed the contract", async () => {
-      let owner = await bridge.owner();
-      assert.equal(owner, coinbase, "The owner is not the deployer");
+      assert.equal(await bridge.owner(), coinbase, "The owner is not the deployer");
     });
 
     it("The token value should be unassigned initially", async () => {
-      let tokenAddress = await bridge.getToken();
-      assert.equal(tokenAddress, "0x0000000000000000000000000000000000000000", "The address is not empty");
-      assert.notEqual(tokenAddress, coinbase, "There is an initial address");
+      assert.equal(await bridge.getToken(), "0x0000000000000000000000000000000000000000", "The address is not empty");
+      assert.notEqual(await bridge.getToken(), coinbase, "There is an initial address");
     });
   });
 
   describe("Set token to new address", () => {
     it("The token is changed to a new address", async () => {
       await bridge.setToken(token.address);
-      let tokenAddress = await bridge.getToken();
-      assert.equal(tokenAddress, token.address, "the address was not changed");
+      assert.equal(await bridge.getToken(), token.address, "the address was not changed");
     });
 
     it("The token cannot be changed by a non-owner", async () => {
@@ -44,36 +41,32 @@ contract("MainnetBridgeContract", accounts => {
   describe("Transfer tokens", () => {
     it("sending tokens to recipient", async () => {
       await bridge.setToken(token.address);
-      let initialBalance = await token.balanceOf(bridge.address);
-      assert.equal(initialBalance, 0, "there should not be an initial balance");
+      assert.equal(await token.balanceOf(bridge.address), 0, "there should not be an initial balance");
       await token.approve(bridge.address, 10);
-      await bridge.onTokenTransfer(10);
-      let finalBalance = await token.balanceOf(bridge.address);
-      assert.equal(finalBalance, 10, "tokens were not transferred");
+      assert(await bridge.onTokenTransfer(10), "fail on token transer");
+      assert.equal(await token.balanceOf(bridge.address), 10, "tokens were not transferred");
     });
 
     it("receiving tokens", async () => {
       await bridge.setToken(token.address);
       await token.approve(bridge.address, 10);
-      await bridge.onTokenTransfer(10);
+      assert(await bridge.onTokenTransfer(10), "fail on token transfer");
 
       //transactionHash is of testing purposes only
-      await bridge.returnTokens(accounts[2], 10, token.transactionHash);
-
-      let balance = await token.balanceOf(bridge.address);
-      assert.equal(balance, 0, "tokens were not transferred");
+      assert(await bridge.returnTokens(accounts[3], 10, token.transactionHash), "fail on return tokens");
+      assert.equal(await token.balanceOf(bridge.address), 0, "tokens were not transferred");
     });
 
     it("repeat transactions", async () => {
       await bridge.setToken(token.address);
       await token.approve(bridge.address, 20);
-      await bridge.onTokenTransfer(20);
+      assert(await bridge.onTokenTransfer(20), "fail on token transer");
 
       //transactionHash is of testing purposes only
-      await bridge.returnTokens(accounts[2], 10, token.transactionHash);
+      assert(await bridge.returnTokens(accounts[4], 10, token.transactionHash), "fail on return tokens");
 
       try {
-        await bridge.returnTokens(accounts[2], 10, token.transactionHash);
+        await bridge.returnTokens(accounts[4], 10, token.transactionHash);
         throw new Error("Error was not thrown");
       } catch (error) {
         assert.equal(error.reason, "MainnetBridgeContract: transaction has already been recorded", "failed for reason other than 'transaction has already been recorded'");
