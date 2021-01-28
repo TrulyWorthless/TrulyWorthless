@@ -1,42 +1,16 @@
 const TokenContract = artifacts.require("WorthlessWrapper");
-const BridgeContract = artifacts.require("RivendellNetworkBridgeContract");
 
 contract("WorthlessWrapper", accounts => {
   const coinbase = accounts[0];
   var token;
-  var bridge;
 
   beforeEach(async () => {
     token = await TokenContract.new();
-    bridge = await BridgeContract.new();
   });
 
   describe("Initial values", () => {
     it("The initial mint count should match", async () => {
       assert.equal(await token.totalSupply(), 0, "There was an initial supply");
-    });
-
-    it("The bridge value should be unassigned initially", async () => {
-      assert.equal(await token.getBridge(), "0x0000000000000000000000000000000000000000", "The address is not empty");
-      assert.notEqual(await token.getBridge(), coinbase, "There is an initial address");
-    });
-  });
-
-  describe("Set bridge to new address", () => {
-    it("The bridge is changed to a new address", async () => {
-      await token.setBridge(bridge.address);
-      assert.equal(await token.getBridge(), bridge.address, "the address was not changed");
-    });
-
-    it("The bridge cannot be changed a second time", async () => {
-      await token.setBridge(bridge.address);
-      try {
-        await token.setBridge(accounts[2]);
-        throw new Error("Error was not thrown");
-      } catch (error) {
-        assert.equal(error.reason, "ERC677: bridge has been previously set", "failed for reason other than 'Previously Set'");
-      }
-      assert.equal(await token.getBridge(), bridge.address, "the address was changed");
     });
   });
 

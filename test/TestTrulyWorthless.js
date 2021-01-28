@@ -18,11 +18,12 @@ contract("TrulyWorthless", accounts => {
     });
 
     it("The decimal count should match", async () => {
-      assert.equal(await token.decimals(), 18, "The decimal count is incorrect");
+      assert.equal(await token.decimals(), 2, "The decimal count is incorrect");
     });
 
     it("The initial mint count should match", async () => {
-      // assert.equal(await token.totalSupply(), 100000000000000000000000000000, "The decimal count is incorrect");
+      let supply = await token.totalSupply() + "";
+      assert.equal(supply, 100000000000, "The decimal count is incorrect");
     });
   });
 
@@ -63,15 +64,9 @@ contract("TrulyWorthless", accounts => {
     });
 
     it("transfer to another account", async () => {
-      // let initialBalance = await token.balanceOf(coinbase);
-      // let balance = await token.balanceOf(accounts[5]);
       assert.equal(await token.balanceOf(accounts[5]), 0, "There is an initial allowance");
       await token.transfer(accounts[5], 10);
-      // let newbalance = await token.balanceOf(accounts[5]);
       assert.equal(await token.balanceOf(accounts[5]), 10, "The tokens were not transferred");
-      // let adjustedBalance = await token.balanceOf(coinbase);
-      // let finalBalance = initialBalance - adjustedBalance;
-      // assert.equal(finalBalance , 10, "Difference is balance not correct");
     });
   });
 });
