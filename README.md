@@ -3,7 +3,7 @@ A repository for the TrulyWorthless Coin
 
 ![logo](https://raw.githubusercontent.com/amshirif/TrulyWorthless/main/images/TrulyWorthlessLogo.png)
 
-Here are the Mainnet and Kovan Loocations of the Coin
+Here are the Mainnet and Kovan Locations of the Coin
 
 Mainnet
 Contract Address- 0x46292f6ba764e34f69774913eea2f626591cb1e9
