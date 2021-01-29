@@ -2,7 +2,7 @@
 A repository for the TrulyWorthless Coin
 
 ![logo](https://raw.githubusercontent.com/amshirif/TrulyWorthless/main/images/TrulyWorthlessLogo.png)
-
+https://img.shields.io/github/license/amshirif/TrulyWorthless
 Here are the Mainnet and Kovan Locations of the Coin
 
 Mainnet
