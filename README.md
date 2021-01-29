@@ -1,9 +1,7 @@
 # TrulyWorthless
 A repository for the TrulyWorthless Coin
 
-<p align="center">
-    <img src="![logo](https://raw.githubusercontent.com/amshirif/TrulyWorthless/main/images/TrulyWorthlessLogo.png)">
-</p>
+![logo](https://raw.githubusercontent.com/amshirif/TrulyWorthless/main/images/TrulyWorthlessLogo.png)
 
 <p align="center">
   <img alt="GitHub" src="https://img.shields.io/github/license/amshirif/TrulyWorthless">
