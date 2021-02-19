@@ -13,6 +13,8 @@ A repository for the TrulyWorthless Coin
   <img alt="npm" src="https://img.shields.io/npm/v/solidity-coverage?label=solidity-coverage&logo=npm">
 </p>
 
+These contracts are meant to be foundational for projects to come. Much of what is seen is taken from open source resources, and will continue to be built with more open source as well as original code.
+
 Please visit www.TrulyWorthless.com to see more!
 
 Kovan Testnet Network addresses are being updated at this time!
