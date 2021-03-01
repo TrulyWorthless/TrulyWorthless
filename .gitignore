@@ -15,3 +15,7 @@ commands.txt
 
 #Testing
 contracts/IERC20.sol
+
+#Environment
+.env
+test.sol
