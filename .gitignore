@@ -19,3 +19,4 @@ contracts/IERC20.sol
 #Environment
 .env
 test.sol
+multi.sol

@@ -4,11 +4,27 @@ const Transaction = require("ethereumjs-tx").Transaction
 const FileSystem = require('fs')
 
 /********* web3 *********/
-const kovan = 'https://eth-kovan.alchemyapi.io/v2/' + process.env.ALCHEMY_API_KEY
-const web3 = new Web3(kovan)
+// const kovan = 'https://eth-kovan.alchemyapi.io/v2/' + process.env.ALCHEMY_API_KEY
+const rinkeby = 'https://eth-rinkeby.alchemyapi.io/v2/-DWFXOD_uK_qWQ5rHikd-IKWN7WTvhE2'
+const web3 = new Web3(rinkeby)
 
-/********* token addresses *********/
-const TELCOIN_ADDRESS = "0xD2CF357588BB0B1a29d2ba5e42C0918FCA573649"
+/********* token values *********/
+const TOKEN_ABI = fileToJSON('build/contracts/StableCoin.json').abi
+
+/********* addresses *********/
+//safe
+const GNOSIS_SAFE_ADDRESS = "0xbc2c33441d087Ed4521e27866710b69c12ab4ee7"
+//tokens
+const EAUD_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eAUD
+const ECAD_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eCAD
+const ECNY_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eCNY
+const EEUR_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eEUR
+const EGBP_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eGBP
+const EIDR_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eIDR
+const EJPY_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eJPY
+const EPHP_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').ePHP
+const ESGD_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eSGD
+const EUSD_ADDRESS = fileToJSON('ethereum/stable_coin_addresses_rinkeby.json').eUSD
 
 /********* helper functions *********/
 function fileToJSON(file) {
@@ -16,10 +32,29 @@ function fileToJSON(file) {
   return JSON.parse(rawdata);
 }
 
+async function encodeParameters(parameter) {
+  return web3.eth.abi.encodeParameters(['string', 'string', 'uint8', 'uint256'], parameter)
+}
+
 /********* token functions *********/
 //create token
 async function createToken(coinbase, privateKey, data) {
   let transactionArgs = await getTransactionArgs(coinbase)
+
+  const transactionObject = {
+    nonce: transactionArgs[0],
+    gasLimit: transactionArgs[1],
+    gasPrice: transactionArgs[2],
+    data: data
+  }
+
+  return await submitTransactionWithTokenAddressReturn(privateKey, transactionObject)
+}
+
+//create stablecoin
+async function createStableCoin(coinbase, privateKey, contractBytecode, encodedParameters) {
+  let transactionArgs = await getTransactionArgs(coinbase)
+  const data = contractBytecode + encodedParameters;
 
   const transactionObject = {
     nonce: transactionArgs[0],
@@ -63,10 +98,64 @@ async function approve(coinbase, privateKey, tokenAddress, spender, amount) {
   return await submitTransaction(privateKey, transactionObject)
 }
 
+//add owner
+async function addOwner(coinbase, privateKey, tokenAddress, newOwner) {
+  const token = new web3.eth.Contract(TOKEN_ABI, tokenAddress)
+  let transactionArgs = await getTransactionArgs(coinbase)
+
+  const transactionObject = {
+    nonce: transactionArgs[0],
+    gasLimit: transactionArgs[1],
+    gasPrice: transactionArgs[2],
+    to: tokenAddress,
+    data: token.methods.addOwner(newOwner).encodeABI()
+  }
+
+  return await submitTransaction(privateKey, transactionObject)
+}
+
+//mint
+async function mint(coinbase, privateKey, tokenAddress, amount) {
+  const token = new web3.eth.Contract(TOKEN_ABI, tokenAddress)
+  let transactionArgs = await getTransactionArgs(coinbase)
+
+  const transactionObject = {
+    nonce: transactionArgs[0],
+    gasLimit: transactionArgs[1],
+    gasPrice: transactionArgs[2],
+    to: tokenAddress,
+    data: token.methods.mint(amount).encodeABI()
+  }
+
+  return await submitTransaction(privateKey, transactionObject)
+}
+
+//burn
+async function burn(coinbase, privateKey, tokenAddress, amount) {
+  const token = new web3.eth.Contract(TOKEN_ABI, tokenAddress)
+  let transactionArgs = await getTransactionArgs(coinbase)
+
+  const transactionObject = {
+    nonce: transactionArgs[0],
+    gasLimit: transactionArgs[1],
+    gasPrice: transactionArgs[2],
+    to: tokenAddress,
+    data: token.methods.burn(amount).encodeABI()
+  }
+
+  return await submitTransaction(privateKey, transactionObject)
+}
+
+/********* view functions *********/
+async function isOwner(tokenAddress, owner) {
+  const token = new web3.eth.Contract(TOKEN_ABI, tokenAddress)
+  return await token.methods.isOwner(owner).call((err, result) => { return result })
+}
+
 /********* private functions *********/
 async function getTransactionArgs(coinbase) {
   let transactionCount = await web3.eth.getTransactionCount(coinbase)
-  let gasLimit = 12000000
+  let gasLimit = 2500000
   let gasPrice = await web3.eth.getGasPrice()
 
   transactionCount = web3.utils.toHex(transactionCount)
@@ -77,7 +166,7 @@ async function getTransactionArgs(coinbase) {
 }
 
 async function submitTransaction(privateKey, transactionObject) {
-  const transaction = new Transaction(transactionObject, {chain:'kovan'})
+  const transaction = new Transaction(transactionObject, {chain:'rinkeby'})
   transaction.sign(privateKey)
 
   const serializedTransaction = transaction.serialize()
@@ -93,7 +182,7 @@ async function submitTransaction(privateKey, transactionObject) {
 }
 
 async function submitTransactionWithContractAddressReturn(privateKey, transactionObject) {
-  const transaction = new Transaction(transactionObject, {chain:'kovan'})
+  const transaction = new Transaction(transactionObject, {chain:'rinkeby'})
   transaction.sign(privateKey)
 
   const serializedTransaction = transaction.serialize()
@@ -109,7 +198,7 @@ async function submitTransactionWithContractAddressReturn(privateKey, transactio
 }
 
 async function submitTransactionWithTokenAddressReturn(privateKey, transactionObject) {
-  const transaction = new Transaction(transactionObject, {chain:'kovan'})
+  const transaction = new Transaction(transactionObject, {chain:'rinkeby'})
   transaction.sign(privateKey)
 
   const serializedTransaction = transaction.serialize()
@@ -150,13 +239,28 @@ function getTokenAddress(receipt) {
 
 module.exports = {
   //constants
-  telcoin: TELCOIN_ADDRESS,
-  //view methods
-
+  gnosisAddress: GNOSIS_SAFE_ADDRESS,
+  eAUD: EAUD_ADDRESS,
+  eCAD: ECAD_ADDRESS,
+  eCNY: ECNY_ADDRESS,
+  eEUR: EEUR_ADDRESS,
+  eGBP: EGBP_ADDRESS,
+  eIDR: EIDR_ADDRESS,
+  eJPY: EJPY_ADDRESS,
+  ePHP: EPHP_ADDRESS,
+  eSGD: ESGD_ADDRESS,
+  eUSD: EUSD_ADDRESS,
   //helper methods
   fileToJSON: fileToJSON,
+  encodeParameters: encodeParameters,
   //token methods
   createToken: createToken,
+  createStableCoin: createStableCoin,
   transfer: transfer,
   approve: approve,
+  addOwner: addOwner,
+  mint: mint,
+  burn: burn,
+  //view methods
+  isOwner: isOwner,
 }

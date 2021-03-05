@@ -14,12 +14,8 @@ async function contolCenter() {
   await createTokens()
 }
 
-async function viewFunctions() {
-
-}
-
 async function createTokens() {
   console.log("Creating Tokens...")
-  // console.log(await NetworkDriver.createToken(coinbase, privateKey, trulyWorthless))
+  console.log(await NetworkDriver.createToken(coinbase, privateKey, trulyWorthless))
   console.log(await NetworkDriver.createToken(coinbase, privateKey, nonFungibleToken))
 }
