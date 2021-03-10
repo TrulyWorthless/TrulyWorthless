@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/GSN/Context.sol";
 
 /**
- * @title Telcoin Stable Coin Initiative
+ * @title TrulyWorthless Ownable Contract
  * @author Amir Shirif
  * @dev Implements Openzeppelin Audited Contracts
  */
