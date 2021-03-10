@@ -10,7 +10,7 @@ contract WorthlessWrapper is ERC20 {
   event  Deposit(address indexed sender, uint amount);
   event  Withdrawal(address indexed recipient, uint amount);
 
-  constructor () public ERC20("WorthlessWrapper", "WWC") {}
+  constructor () ERC20("WorthlessWrapper", "WWC") {}
 
   //receive tokenized ether
   function deposit() external payable {

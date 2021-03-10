@@ -15,8 +15,5 @@ images/review/
 coverage.json
 commands.txt
 
-#Testing
-contracts/IERC20.sol
-
 #Environment
 .env

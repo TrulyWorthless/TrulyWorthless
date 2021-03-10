@@ -8,7 +8,7 @@ import "./ERC677.sol";
 This is an instance of the ERC677 token
 */
 contract LessWorthless is ERC677 {
-  constructor () public ERC20("LessWorthless", "LWC") {
+  constructor () ERC20("LessWorthless", "LWC") {
     _setupDecimals(0);
     _mint(msg.sender, 1000000);
   }
