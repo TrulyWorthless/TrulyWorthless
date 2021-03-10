@@ -4,8 +4,7 @@ const Transaction = require("ethereumjs-tx").Transaction
 const FileSystem = require('fs')
 
 /********* web3 *********/
-// const kovan = 'https://eth-kovan.alchemyapi.io/v2/' + process.env.ALCHEMY_API_KEY
-const rinkeby = 'https://eth-rinkeby.alchemyapi.io/v2/-DWFXOD_uK_qWQ5rHikd-IKWN7WTvhE2'
+const rinkeby = 'https://rinkeby.infura.io/v3/' + process.env.INFURA_API_KEY
 const web3 = new Web3(rinkeby)
 
 /********* token values *********/
@@ -214,7 +213,7 @@ async function submitTransactionWithTokenAddressReturn(privateKey, transactionOb
 }
 
 async function submitTransactionWithReceiptReturn(privateKey, transactionObject) {
-  const transaction = new Transaction(transactionObject, {chain:'kovan'})
+  const transaction = new Transaction(transactionObject, {chain:'rinkeby'})
   transaction.sign(privateKey)
 
   const serializedTransaction = transaction.serialize()

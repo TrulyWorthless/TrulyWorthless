@@ -22,7 +22,7 @@ contract("TrulyWorthless", accounts => {
     });
 
     it("The initial mint count should match", async () => {
-      let supply = await token.totalSupply() + ""
+      let supply = await token.totalSupply()
       assert.equal(supply, 100000000000, "The decimal count is incorrect")
     });
   });
