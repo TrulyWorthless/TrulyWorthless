@@ -1,4 +1,5 @@
-pragma solidity ^0.6.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
@@ -9,7 +10,7 @@ contract WorthlessWrapper is ERC20 {
   event  Deposit(address indexed sender, uint amount);
   event  Withdrawal(address indexed recipient, uint amount);
 
-  constructor () public ERC20("WorthlessWrapper", "WWC") {}
+  constructor () ERC20("WorthlessWrapper", "WWC") {}
 
   //receive tokenized ether
   function deposit() external payable {

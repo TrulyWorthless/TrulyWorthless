@@ -1,6 +1,8 @@
 #Directories
 build/
 coverage/
+ethereum/
+etherscan/
 node_modules/
 images/review/
 .coverage_artifacts
@@ -13,5 +15,5 @@ images/review/
 coverage.json
 commands.txt
 
-#Testing
-contracts/IERC20.sol
+#Environment
+.env
