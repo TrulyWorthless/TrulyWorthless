@@ -1,4 +1,5 @@
-pragma solidity ^0.6.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
 
 /*
 The purpose of this interface is to allow for the ERC677 contract to have an API

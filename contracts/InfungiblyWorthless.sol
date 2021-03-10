@@ -1,4 +1,5 @@
-pragma solidity ^0.6.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -19,7 +20,7 @@ contract NFT is ERC721, Ownable {
 
   Athlete[] private players;
 
-  constructor () public ERC721("PlayerCoin", "PC") Ownable() {}
+  constructor () ERC721("PlayerCoin", "PC") Ownable() {}
 
   function createPlayer(string memory _name, string memory _teamName, string memory _price, Rarity _rarity, string memory _perk1, string memory _perk2, string memory _perk3) public onlyOwner returns (uint256) {
     Athlete memory athlete = Athlete({
