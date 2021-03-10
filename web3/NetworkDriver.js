@@ -50,8 +50,8 @@ async function createToken(coinbase, privateKey, data) {
   return await submitTransactionWithTokenAddressReturn(privateKey, transactionObject)
 }
 
-//create stablecoin
-async function createStableCoin(coinbase, privateKey, contractBytecode, encodedParameters) {
+//create token with parameters
+async function createTokenWithParams(coinbase, privateKey, contractBytecode, encodedParameters) {
   let transactionArgs = await getTransactionArgs(coinbase)
   const data = contractBytecode + encodedParameters;
 
@@ -254,7 +254,7 @@ module.exports = {
   encodeParameters: encodeParameters,
   //token methods
   createToken: createToken,
-  createStableCoin: createStableCoin,
+  createTokenWithParams: createTokenWithParams,
   transfer: transfer,
   approve: approve,
   addOwner: addOwner,

@@ -11,7 +11,7 @@ const nonFungibleToken = (NetworkDriver.fileToJSON('build/contracts/NFT.json')).
 
 contolCenter()
 async function contolCenter() {
-  await createTokens()
+  // await createTokens()
 }
 
 async function createTokens() {
